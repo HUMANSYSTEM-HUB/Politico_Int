@@ -1,0 +1,10 @@
+h1,p,a{
+    font-family: 'Josefin Sans', sans-serif;
+    object-fit: cover;
+}
+div. carouselExampleControls {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
