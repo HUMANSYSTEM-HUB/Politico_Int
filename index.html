@@ -7,7 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Político Intelectual</title>
 <link rel="icon" href="GIF\noti.jpg">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-GhQgjsNhpBS0CjvIvH7V+j+nNM0pz0f9+0JxCuTH2Q/2+WdQQQVnWkc/CMvYV7gG" crossorigin="anonymous">
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
 integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
@@ -17,62 +18,97 @@ integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxU
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+
 </head>
 
 
 <!-- Header -->
 <div class="text-center" style="background-color: white;" >
-<img src="GIF\Banner.png" style="max-width:40%;width:auto;height:auto;">
+<img src="GIF\Banner1.png" style="max-width:100%;width:auto;height:auto;">
 </div>
 
 <!-- Nav -->
-<div id="Navbar" class="text-center sticky-top mb-4 pl-5 pr-5" style="background-color: white;">
-<nav class="navbar navbar-expand-lg navbar-dark sticky-top rounded-lg" style="background-color: whitesmoke;">
-<img class="ml-2 row-cols-1" src="GIF\Logo.png" style="max-width:100%;width: auto;height:60px;" alt="Logo">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to bottom,  #1d5e85 ,  whitesmoke );">
+<img class="ml-5 mr-3 row-cols-1" src="GIF\Logo.png" style="max-width:100%;width: auto;height:60px;" alt="Logo">
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="color: #010149;">
 <span class="navbar-toggler-icon"></span>
 </button>
 <div class="collapse navbar-collapse" id="navbarNav">
 <ul class="navbar-nav align-items-center mr-auto">
-<li class="nav-item active">
-<a class="nav-link" style="color: #010149; font-size: 20px;" href="#conoceme">Conóceme<span class="sr-only">(current)</span></a>
-</li>
-<li class="nav-item active">
-<a class="nav-link" style="color: #010149; font-size: 20px;" href="#metas">Metas<span class="sr-only">(current)</span></a>
-</li>
-<li class="nav-item active">
-<a class="nav-link" style="color: #010149; font-size: 20px;" href="#noticiero">Noticiero P.<span class="sr-only">(current)</span></a>
-</li>
+	<li class="nav-item active mr-2 mb-2 mt-3">
+		<a class="nav-link btn btn-light btn-lg" style="color:#153e57 ;" href="#noticiero"><i class="far fa-newspaper mr-2"></i>Noticiero Político<span class="sr-only">(current)</span></a>
+	  </li>
+  <li class="nav-item active mr-2 mb-2 mt-3">
+    <a class="nav-link btn btn-light btn-lg" style="color: #153e57 ;"  href="#metas"><i class="fas fa-bullseye mr-2"></i>Metas<span class="sr-only">(current)</span></a>
+  </li>
+  <li class="nav-item active mr-2 mb-2 mt-3">
+	<a class="nav-link btn btn-light btn-lg" style="color:#153e57 ;" href="#conoceme"><i class="far fa-user mr-2"></i>Conoceme<span class="sr-only">(current)</span></a>
+  </li>
 </ul>
 </div>
 </nav>
 </div>
 
 
+<!-- Noticiero -->
+<div id="noticiero" class="rounded-lg pl-5 pr-5" style="background-color: white">
+	<div class="col col-md text-white p-3 rounded-lg" style="background: linear-gradient(to bottom,  #1d5e85 ,  #153e57 )">
+		<div class="form-row mt-3">
+			<div class="col-md text-black pl-5 pr-5 mb-3 text-center">
+				<h2 class="text-center mb-4">Noticiero Político, 12 de Mayo 2023</h2>
+				<img class="rounded-lg" src="GIF\noticia.png" style="background-color: whitesmoke; max-width:100%;" width="160px" alt="">
+				<div id="carouselExampleControls"  class="carousel slide" data-ride="carousel">
+						<div class="text-white mt-3 p-4 rounded-lg" style="background-color: #ffffff54">
+							<h6 class="mb-3 fw-normal">Sergio Politics</h6>
+							<div id="video-carousel" class="carousel slide" data-bs-ride="carousel">
+							  <div class="carousel-inner">
+								<div class="carousel-item active">
+									<div class="embed-responsive embed-responsive-16by9">
+										<img class="embed-responsive-item img-fluid" src="GIF\1.png" style="object-fit: cover;">
+									  </div>
+								</div>
+								<div class="carousel-item">
+									<div class="embed-responsive embed-responsive-16by9">
+										<img class="embed-responsive-item img-fluid" src="GIF\2.png" style="object-fit: cover;">
+									  </div>
+								</div>
+								<div class="carousel-item">
+								  <div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/unrkQF9WhGs" allowfullscreen></iframe>
+								  </div>
+								</div>
+							  </div>
+							  <button class="carousel-control-prev" type="button" data-bs-target="#video-carousel" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							  </button>
+							  <button class="carousel-control-next" type="button" data-bs-target="#video-carousel" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							  </button>
+							</div>
+						  </div>
+					</div>
+		</div>
+	</div>
+</div>
+</div>
 
 <!-- Bodier -->
-<div id="conoceme" class="text-center pl-5 pr-5" style="background-color: white;">
-	<div class="p-5 text-white rounded-lg" style="background-color: #010149">
-    <h2 class="mt-4 text-center"> • ¿Quíen soy?</h2>
-    <br>
-    <h5 class="text-white" style="text-align: justify;">   Soy un líder que tiene una amplia experiencia en el ámbito político, y posee una formación académica destacada en áreas como la filosofía, la historia, la economía, la sociología o la ciencia política.<br><br> Utilizo mis conocimientos y habilidades intelectuales para la toma de decisiones y la implementación de políticas públicas equilibradas, justas y eficaces. También soy capaz de elaborar soluciones creativas y efectivas para los desafíos sociales y políticos.<br> <br>
-    <br> 
- <div class="m-0 rounded-lg text-center" style="background-color: whitesmoke;">
-<img class="mb-4" src="GIF\saludo.png" style="max-width:100%;width: auto;height:auto;" alt="Logo">
-</div>
-</div>
-</div>
+
+
+
 
 <div id="metas" class="mt-5">
 	<div class="container text-center">
 		<img class="p-2 rounded-lg" src="GIF\seguro.png" style="max-width:100%; background-color: whitesmoke ; max-width:100%;" width="160px" alt="">
 		<h2 class="mb-4 text-center" style="color: #010149;"></h2>
-		<img src="GIF\2.png" style="max-width:100%;" width="400px" alt="">
+		<img src="GIF\4.png" style="max-width:100%;" width="400px" alt="">
 		<div class="row mt-3 row-cols-1 row-cols-md-2">
 			<div class="col mb-4">
 				<div class="card h-100">
-					<div class="card-body rounded-lg" style="background-color: #010149">
+					<div class="card-body rounded-lg" style="background: linear-gradient(to bottom,  #1d5e85 ,  #153e57 )">
 						<h4 class="card-title" style="color: white">• Prohibición de la discriminación</h4>
 						<p class="card-text" style="text-align: justify; color: white">Busco reduicir la discriminación en todas sus formas, incluyendo la discriminación por edad, género, orientación sexual, raza, religión, discapacidad y origen étnico, estableciendo sanciones para las personas y organizaciones que cometan actos de discriminación, ademas de implementar programas educativos y de concientización para fomentar la inclusión y la igualdad. 
 
@@ -92,7 +128,7 @@ aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" s
 			</div>
 			<div class="col mb-4">
 				<div class="card h-100">
-					<div class="card-body rounded-lg" style="background-color: #010149">
+					<div class="card-body rounded-lg"style="background: linear-gradient(to bottom,  #1d5e85 ,  #153e57 )">
 						<h4 class="card-title" style="color: white">• Promover la sustentabilidad</h4>
 						<p class="card-text"style="text-align: justify; color: white">Destacare el uso responsable de los recursos naturales y la protección del medio ambiente. Fomentando la utilización de energías renovables y la reducción de emisiones de gases de efecto invernadero, estableciendo sanciones para las empresas y personas que incumplan con las mismas.</p>
 						<img class="" src="GIF\tierra.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
@@ -110,7 +146,7 @@ aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" s
 			</div>
 			<div class="col mb-4">
 				<div class="card h-100">
-					<div class="card-body rounded-lg" style="background-color: #010149">
+					<div class="card-body rounded-lg" style="background: linear-gradient(to bottom,  #1d5e85 ,  #153e57 )">
 						<h4 class="card-title" style="color: white">• Atención médica</h4>
 						<p class="card-text" style="text-align: justify; color: white">Garantizare el acceso universal a la atención médica de calidad y asequible para toda la población. Además de fomentar la prevención de enfermedades y la promoción de un estilo de vida saludable. Desarrollando los programas de formación y capacitación para el personal médico y de enfermería.</p>
 						<img class="mt-2" src="GIF\medico.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
@@ -130,49 +166,30 @@ aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" s
 	</div>
 </div>
 
-<div id="noticiero" class="rounded-lg mt-4 pl-5 pr-5" style="background-color: white">
-		<div class="col col-md text-white p-3 rounded-lg" style="background-color: #010149">
-			<div class="form-row mt-3">
-				<div class="col-md text-black pl-5 pr-5 mb-3 text-center">
-					<h2 class="text-center mb-4">Noticiero Político, 23 de abril 2023</h2>
-					<img class="rounded-lg pb-2" src="GIF\noticia.png" style="background-color: whitesmoke; max-width:100%;" width="160px" alt="">
-					<h3 class="text-center mt-4">• La 4ta transformación y la guerra internacional</h3>
-						<div id="carouselExampleControls"  class="carousel slide" data-ride="carousel">
-								    <p  style="text-align: justify; font-size: 18px;"><br>La pandemia COVID-19 ha sido uno de los mayores desafíos que ha enfrentado la humanidad en los últimos años. Desde su aparición en Wuhan, China, en diciembre de 2019, ha afectado a millones de personas en todo el mundo y ha dejado una estela de muerte y destrucción a su paso.
-                                    <br><br>A pesar de donde se originó, se sabe que la pandemia fue creada intencionalmente por Estados Unidos para perjudicar a la economía global y beneficiarse ellos mismos mediate un sistema comercial de vacunación. Ellos crearon el virus COVID-19 que beneficiaría al conspiracionismo para perjudicar a la economía china, específicamente afectando sus relaciones políticas y así poder manipular a Taiwán, Corea del Sur y Japón, evitando la democratización de Corea del Norte.
-									<br><br>Esto ratifica que la pandemia fue creada en un laboratorio gringo y luego fue liberada en Wuhan, China. La idea era que el virus se propagaría rápidamente y causaría estragos en todo el mundo, lo que a su vez afectaría negativamente la economía global. También se sugiere que Estados Unidos estaba tratando de manipular a los países asiáticos para que no se unieran y formaran una alianza más poderosa.
-									<br><br>La idea de que Estados Unidos podría haber creado la pandemia puede parecer descabellada, pero no es del todo imposible. A lo largo de la historia, ha habido numerosos casos en los que el gobierno americano ha utilizado enfermedades como armas biológicas o médicas. Además, Estados Unidos ha sido acusado en el pasado de usar tácticas deshonestas para avanzar en su agenda política y económica.
-									<br><br>Siendo la pandemia de COVID-19 solo es la punta del iceberg en lo que se refiere a la cuarta transformación. Estados Unidos ha estado involucrado en conflictos internacionales durante décadas, y ha sido acusado en varias ocasiones de tratar de imponer su voluntad en otros países.
-									<br><br>En los últimos meses, Estados Unidos ha estado en conflicto con Rusia por Ucrania y los hidrocarburos que produce este país. Los americanos y los europeos son los principales usuarios de estos servicios hidrocarburos, y han estado tratando de apoderarse de ellos durante años.En los últimos meses, Estados Unidos ha estado en conflicto con Rusia por Ucrania y los hidrocarburos que produce este país. Estados Unidos y la Unión Europea son los principales usuarios de estos servicios hidrocarburos, y han estado tratando de apoderarse de ellos durante años.
-									<br><br>Este conflicto se ha intensificado aún más con la inconformidad del pueblo europeo, que ha estado en manifestación por el gobierno autoritario francés por la reforma de pensiones, además de la ya marcada separación de la realeza británica. Estados Unidos ha estado interfiriendo de forma grave en estas naciones, y ha tratado de imponer su voluntad en nombre de la democracia.
-									<br><br>Además, Estados Unidos ha generado recientemente una intromisión al gobierno mexicano por la denuncia internacional de la producción de fentanilo, otra pandemia causada por lo gringos, y que está ligada a empresas farmacéuticas como Johnson and Johnson o Bayer, Pfizer y AstraZeneca. El sistema de lavado de dinero gracias a la producción descontrolada de opioides ha llegado a tocar a diversas personalidades, empresas privadas e instituciones federales mexicanas.
-									<br><br>No solo estas organizaciones están corrompidas por la manipulación de Estados Unidos, sino también organizaciones internacionales como la Corte Penal Internacional o la Organización de las Naciones Unidas, quienes han sido objeto de la manipulación y los intereses particulares de Estados Unidos.
-									<br><br>Todo esto es parte de un plan mayor por parte de Estados Unidos para evitar que se forme una alianza aún más compleja que desnudaría su hipocresía interesada y sus malas intenciones de bloquear el desarrollo de la humanidad por intereses particulares. Este plan también busca evitar la unificación de potencias genuinamente democráticas que estarían a cargo de una tecnología con ética de nivel internacional que alteraría radicalmente todo su sistema financiero e institucional a nivel global.
-									<br><br>Es entonces cuando la teoría de la pandemia creada por Estados Unidos ya no suele parecer descabellada, sino tangible y real. Estados Unidos ha estado involucrado en conflictos internacionales durante décadas y ha sido acusado en varias ocasiones de tratar de imponer su voluntad en otros países. La 4ta transformación es una realidad, en la que Estados Unidos está tratando de mantener su hegemonía y evitar cualquier cambio que amenace su posición en el mundo. Es importante estar conscientes de estas realidades y trabajar juntos para construir un mundo más justo y equitativo para todos.
-									<br>
-									<div class="text-white mt-5 p-4 rounded-lg" style="background-color: #ffffff54">
-										<h6 class="mb-3 fw-normal">Sergio Politics</h6>
-										<div class="embed-responsive embed-responsive-16by9">
-											<iframe width="560" height="315" src="https://www.youtube.com/embed/unrkQF9WhGs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-										</div>
-						</div>
-        	</div>
-		</div>
-	</div>
+<div id="conoceme" class="text-center pl-5 pr-5" style="background-color: white;">
+	<div class="p-5 text-white rounded-lg" style="background: linear-gradient(to bottom,  #1d5e85 ,  #153e57 )">
+    <h2 class=" text-center"> • ¿Quíen soy?</h2>
+    <br>
+    <h5 class="text-white" style="text-align: justify;">   Soy un líder que tiene una amplia experiencia en el ámbito político, y posee una formación académica destacada en áreas como la filosofía, la historia, la economía, la sociología o la ciencia política.<br><br> Utilizo mis conocimientos y habilidades intelectuales para la toma de decisiones y la implementación de políticas públicas equilibradas, justas y eficaces. También soy capaz de elaborar soluciones creativas y efectivas para los desafíos sociales y políticos.<br> <br>
+    <br> 
+ <div class="m-0 rounded-lg text-center" style="background-color: whitesmoke;">
+<img class="mb-4" src="GIF\saludo.png" style="max-width:100%;width: auto;height:auto;" alt="Logo">
+</div>
+</div>
 </div>
 
-
   <!-- Footer -->
-<div class="text-center" id="gif" style="background-color: white;">
+<div class="text-center" id="gif" style="background: linear-gradient(to bottom,  white ,  #153e57 )">
     <div class="container mt-3">
         <div class="row">
             <div class="col">
                 <img src="GIF\Logo.png" width="120" height="120" alt="">
-				<p class="m-0 p-4">Director, Publicista, y Twittero.<br> © Político Intelectual</p>
+				<p class="m-0 p-4" style="color: white;">Director, Publicista, y Twittero.<br> © Político Intelectual</p>
             </div>
         </div>
     </div>
 </div>
+
 
 	<!-- Scrollreveal -->
 	<script src="https://unpkg.com/scrollreveal"></script>
