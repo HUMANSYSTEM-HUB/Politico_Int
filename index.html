@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Político Intelectual</title>
 <link rel="icon" href="GIF\noti.jpg">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-GhQgjsNhpBS0CjvIvH7V+j+nNM0pz0f9+0JxCuTH2Q/2+WdQQQVnWkc/CMvYV7gG" crossorigin="anonymous">
-    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-GhQgjsNhpBS0CjvIvH7V+j+nNM0pz0f9+0JxCuTH2Q/2+WdQQQVnWkc/CMvYV7gG" crossorigin="anonymous">
+<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
 integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
@@ -20,39 +20,99 @@ integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxU
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
 
 </head>
-
-
-<!-- Header -->
-<div class="text-center" style="background-color: white;" >
-<img src="GIF\Banner1.png" style="max-width:100%;width:auto;height:auto;">
-</div>
-
-<!-- Nav -->
-<nav class="navbar navbar-expand-lg navbar-dark" style="background: linear-gradient(to bottom,  #1d5e85 ,  whitesmoke );">
-<img class=" mr-3 row-cols-1" src="GIF\Logo.png" style="max-width:100%;width: auto;height:60px;" alt="Logo">
-<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="color: #010149;">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-<ul class="navbar-nav align-items-center mr-auto">
-	<li class="nav-item active mr-2 mb-2 mt-3">
-		<a class="nav-link btn btn-link btn-lg" style="color:#153e57 ;" href="#noticiero"><i class="far fa-newspaper mr-2"></i>Noticiero Político<span class="sr-only">(current)</span></a>
-	  </li>
-  <li class="nav-item active mr-2 mb-2 mt-3">
-    <a class="nav-link btn btn-link btn-lg" style="color: #153e57 ;"  href="#metas"><i class="fas fa-bullseye mr-2"></i>Metas<span class="sr-only">(current)</span></a>
-  </li>
-  <li class="nav-item active mr-2 mb-2 mt-3">
-	<a class="nav-link btn btn-link btn-lg" style="color:#153e57 ;" href="#conoceme"><i class="far fa-user mr-2"></i>Conoceme<span class="sr-only">(current)</span></a>
-  </li>
-</ul>
-</div>
-</nav>
-</div>
-
+<!-- CSS -->
+<style>
+	.custom-navbar {
+	  position: fixed;
+	  top: 0;
+	  right: 0;
+	  width: 10%;
+	  height: 100vh;
+	  background: linear-gradient(to bottom, #1d5e85, whitesmoke);
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: flex-start;
+	  padding: 20px;
+	  z-index: 1000;
+	  transition: width 0.3s ease;
+	}
+  
+	.custom-navbar img {
+	  max-width: 100%;
+	  width: auto;
+	  height: 60px;
+	  margin-bottom: 20px;
+	}
+  
+	.custom-navbar ul {
+	  list-style: none;
+	  margin: 0;
+	  padding: 0;
+	}
+  
+	.custom-navbar li {
+	  margin-bottom: 30px;
+	}
+  
+	.custom-navbar a {
+	  color: #153e57;
+	  text-decoration: none;
+	  font-size: 18px;
+	}
+  
+	.main-content {
+	  margin-right: 10%;
+	  padding: 0px;
+	  transition: margin-left 0.3s ease;
+	}
+  
+	@media (max-width: 800px) {
+	  .custom-navbar {
+		width: 10%;
+		display: none;
+	  }
+	   
+	.custom-navbar img {
+	  max-width: 100%;
+	  width: 20px;
+	  height: 40px;
+	  margin-bottom: 20px;
+	  display: none;
+	}
+	  .custom-navbar ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: none; /* Ocultar la lista por defecto */
+    }
+	  .main-content {
+		margin-right:0%;
+		margin-left: 0;
+	}
+}
+  </style>
+  
+  <!-- HTML -->
+  <nav class="custom-navbar">
+	<img class="mr-3 row-cols-1" src="GIF\Logo.png" alt="Logo">
+	<ul>
+	  <li><a href="#noticiero"><i class="far fa-newspaper mr-2"></i>Noticiero Político</a></li>
+	  <li><a href="#metas"><i class="fas fa-bullseye mr-2"></i>Metas</a></li>
+	  <li><a href="#conoceme"><i class="far fa-user mr-2"></i>Conoceme</a></li>
+	  <li><a href="#tiktok"><i class="fab fa-tiktok mr-2"></i>TikTok</a></li>
+	  <li><a href="#twitter"><i class="fab fa-twitter mr-2"></i>Twitter</a></li>
+	</ul>
+  </nav>
+  
+  <div class="main-content">
+	<div class="text-center" style="background-color: white;">
+	  <img src="GIF\Banner.gif" style="max-width:100%;width:auto;height:auto;">
+	</div>
+	
 
 <!-- Noticiero -->
-<div id="noticiero" class="rounded-lg mt-1 pl-2 pr-2" style="background-color: white">
+<div id="noticiero" class=" pt-5 pl-5 pr-5" style="background: linear-gradient(to bottom,  #153e57, white )">
 	<div class="col col-md text-white p-3 rounded-lg" style="background: linear-gradient(to bottom,  #1d5e85 ,  #153e57 )">
 		<div class="form-row mt-3">
 			<div class="col-md text-black mb-3 text-center">
@@ -166,7 +226,7 @@ aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" s
 	</div>
 </div>
 
-<div id="conoceme" class="text-center pl-2 pr-2" style="background-color: white;">
+<div id="conoceme" class="text-center pl-5 mt-5 pr-5" style="background-color: white;">
 	<div class="p-5 text-white rounded-lg" style="background: linear-gradient(to bottom,  #1d5e85 ,  #153e57 )">
     <h2 class=" text-center">  ¿Quíen soy?</h2>
     <br>
@@ -189,6 +249,13 @@ aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" s
         </div>
     </div>
 </div>
+  </div>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.min.js"></script>
+  
+
 
 
 	<!-- Scrollreveal -->
