@@ -12,6 +12,9 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
 integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css">
+
 
 <!-- CSS propio -->
 <link rel="stylesheet" href="assets/css/styles.css">
@@ -97,13 +100,68 @@ integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxU
   <nav class="custom-navbar">
 	<img class="mr-3 row-cols-1" src="GIF\Logo.png" alt="Logo">
 	<ul>
+		<li><button id="btnAceptar" type="button" class="btn btn-outline-info mr-3"><i class="mr-2 fas fa-dollar-sign"></i>Donar</button></li>
 	  <li><a href="#noticiero"><i class="far fa-newspaper mr-2"></i>Noticiero Político</a></li>
 	  <li><a href="#metas"><i class="fas fa-bullseye mr-2"></i>Metas</a></li>
 	  <li><a href="#conoceme"><i class="far fa-user mr-2"></i>Conoceme</a></li>
 	  <li><a href="#tiktok"><i class="fab fa-tiktok mr-2"></i>TikTok</a></li>
 	  <li><a href="https://twitter.com/Politico_int"><i class="fab fa-twitter mr-2"></i>Twitter</a></li>
 	</ul>
-  </nav>
+</nav>
+
+<script>
+// Obtener la lista de elementos de navegación
+var navItems = document.querySelectorAll(".custom-navbar ul li");
+
+// Recorrer los elementos de navegación
+navItems.forEach(function(item) {
+  // Verificar si el elemento no es el botón de donar
+  if (!item.querySelector("#btnAceptar")) {
+    // Agregar evento al pasar el mouse por encima del elemento
+    item.addEventListener("mouseover", function() {
+      this.style.backgroundColor = "white";
+    });
+    // Agregar evento al quitar el mouse del elemento
+    item.addEventListener("mouseout", function() {
+      this.style.backgroundColor = "";
+    });
+  }
+});
+
+// Agregar evento al botón de donar
+var btnDonar = document.getElementById("btnAceptar");
+btnDonar.addEventListener("click", function() {
+  // Mostrar el swal con los botones de donación
+  Swal.fire({
+    title: "Selecciona una cantidad para donar",
+    showCancelButton: true,
+    cancelButtonText: "Cancelar" ,
+    confirmButtonText: "Donar",
+    html:
+      '<button class="swal-donate-button" data-amount="50">$50</button>' +
+      '<button class="swal-donate-button" data-amount="100">$100</button>' +
+      '<button class="swal-donate-button" data-amount="200">$200</button>' +
+      '<button class="swal-donate-button" data-amount="500">$500</button>' +
+      '<input type="number" placeholder="Otra cantidad" id="customAmount" class="swal-donate-input">',
+    focusConfirm: false,
+    preConfirm: function() {
+      // Obtener el valor de la cantidad personalizada
+      var customAmount = document.getElementById("customAmount").value;
+      if (customAmount) {
+        return customAmount;
+      }
+    }
+  }).then(function(result) {
+    if (result.value) {
+      var amount = result.value;
+      // Realizar la acción de donación con la cantidad seleccionada
+      // Aquí puedes agregar tu lógica para procesar la donación
+      console.log("Donar " + amount);
+    }
+  });
+});
+</script>
+
   
   <div class="main-content">
 	<div class="text-center" style="background-color: white;">
@@ -116,28 +174,19 @@ integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxU
 	<div class="col col-md text-white p-3 rounded-lg" style="background: linear-gradient(to bottom,  #1d5e85 ,  #153e57 )">
 		<div class="form-row mt-3">
 			<div class="col-md text-black mb-3 text-center">
-				<h2 class="text-center mb-4">Noticiero Político, 12 de Mayo 2023</h2>
+				<h2 class="text-center mb-4">Noticiero Político, 24 de Junio 2023</h2>
 				<img class="rounded-lg" src="GIF\noticia.png" style="background-color: whitesmoke; max-width:100%;" width="160px" alt="">
 				<div id="carouselExampleControls"  class="carousel slide" data-ride="carousel">
 						<div class="text-white mt-3 p-4 rounded-lg" style="background-color: #ffffff54">
 							<div id="video-carousel" class="carousel slide" data-bs-ride="carousel">
 							  <div class="carousel-inner">
+
 								<div class="carousel-item active">
-									<div class="embed-responsive embed-responsive-16by9">
-										<img class="embed-responsive-item img-fluid" src="GIF\1.png" style="object-fit: cover;">
-									  </div>
-								</div>
-								<div class="carousel-item">
-									<div class="embed-responsive embed-responsive-16by9">
-										<img class="embed-responsive-item img-fluid" src="GIF\2.png" style="object-fit: cover;">
-									  </div>
-								</div>
-								<div class="carousel-item">
 								  <div class="embed-responsive embed-responsive-16by9">
-									<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/unrkQF9WhGs" allowfullscreen></iframe>
+									<iframe width="560" height="315" src="https://www.youtube.com/embed/1hEWID8Es5M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 								  </div>
 								</div>
-							  </div>
+							</div>
 							  <button class="carousel-control-prev" type="button" data-bs-target="#video-carousel" data-bs-slide="prev">
 								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 								<span class="visually-hidden"></span>
