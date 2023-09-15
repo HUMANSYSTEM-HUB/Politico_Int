@@ -169,41 +169,37 @@ btnDonar.addEventListener("click", function() {
 	</div>
 	
 
-<div id="nuevo_div" class="text-center pl-3 pt-3 pr-3" style="background: linear-gradient(to bottom,  #153e57, white )"> 
-     <div class="text-white pl-3 pr-3 pt-3 pb-3 rounded-lg" style="background: linear-gradient(to bottom,  #1d5e85 ,  #153e57 )"> 
-         <p class="text-white" style="text-align: justify; color: #153e57">Plática conmigo y preguntame sobre leyes, política o noticias... 🔍<br></p> 
-<div style="position:relative;">
-                <input type="text" class="form-control"
-id="pregunta_input" style="color:#153e57" name="nombre" id="inputNombre" placeholder="Dime que necesitas..." >
-                                 
-<button onclick="hacerPregunta()" style="position: absolute; right: 0; top: 0; padding: 10px;" class="btn btn-info mt-3">🔍</button>
-             </div>
-         <div id="area_preguntas" class="p-2 text-left rounded-lg" style="background-color: white;">
+<div id="nuevo_div" class="text-center pl-3 pt-3 pr-3" style="background: linear-gradient(to bottom,  #153e57, white )">  
+    <div class="text-white pl-3 pr-3 pt-3 pb-3 rounded-lg" style="background: linear-gradient(to bottom,  #1d5e85 ,  #153e57 )">  
+        <p class="text-white" style="text-align: justify; color: #153e57">Plática conmigo y pregúntame sobre leyes, política o noticias... 🔍<br></p>  
+        <div style="position:relative;"> 
+            <textarea class="form-control" id="pregunta_input" style="color:#153e57; height: 150px;" placeholder="Dime qué necesitas..."></textarea>
+            <button onclick="hacerPregunta()" style="position: absolute; right: 0; top: 0; padding: 10px;" class="btn btn-info mt-3">
+                <img src="ruta_del_icono_de_busqueda.png" alt="Buscar">
+            </button> 
+        </div> 
+        <div id="area_preguntas" class="p-2 text-left rounded-lg" style="background-color: white;"> 
+            <div id="respuesta_politico_intelectual" style="color: black; font-family: monospace;"></div> 
+        </div>  
+        <div class="m-0 rounded-lg text-center" style="background-color: whitesmoke;"></div>  
+    </div>  
+</div> 
 
-             <div id="respuesta_politico_intelectual" style="color: black; font-family: monospace;"></div>
-         </div> 
-         <div class="m-0 rounded-lg text-center" style="background-color: whitesmoke;"> 
-             
-         </div> 
-     </div> 
-</div>
+<script> 
+    function hacerPregunta() { 
+        var pregunta = document.getElementById("pregunta_input").value; 
+        var respuesta = obtenerRespuestaDelPoliticoIntelectual(pregunta);
+        document.getElementById("respuesta_politico_intelectual").innerHTML = respuesta; 
+    } 
 
-<script>
-    function hacerPregunta() {
-        var pregunta = document.getElementById("pregunta_input").value;
-        // Aquí puedes utilizar código JavaScript para enviar la pregunta a un servidor o procesarla de alguna manera.
-        // Luego, obtén la respuesta del "Político Intelectual" y colócala en el div con id "respuesta_politico_intelectual".
-        var respuesta = obtenerRespuestaDelPoliticoIntelectual(pregunta); // Reemplaza esta línea con tu propia lógica.
-        document.getElementById("respuesta_politico_intelectual").innerHTML = respuesta;
-    }
-
-    function obtenerRespuestaDelPoliticoIntelectual(pregunta) {
-        // Aquí puedes implementar la lógica para obtener la respuesta del "Político Intelectual".
-        // Por ejemplo, podrías enviar la pregunta a un servidor que procese la consulta y devuelva una respuesta.
-        // Luego, retorna esa respuesta aquí.
-        return "🌎 Político Intelectual: Disponible pronto." + pregunta;
-    }
+    function obtenerRespuestaDelPoliticoIntelectual(pregunta) { 
+        // Implementa aquí la lógica para obtener la respuesta del "Político Intelectual". 
+        // Por ejemplo, podrías enviar la pregunta a un servidor que procese la consulta y devuelva una respuesta. 
+        // Luego, retorna esa respuesta aquí. 
+        return "🌎 Político Intelectual: Disponible pronto." + pregunta; 
+    } 
 </script>
+
 
 <!-- Noticiero -->
 <div id="noticiero" class=" pt-3 pl-3 pr-3" style="background-color:white">
