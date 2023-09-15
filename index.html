@@ -179,7 +179,31 @@ btnDonar.addEventListener("click", function() {
              <img class="mb-4" src="RUTA_DE_LA_IMAGEN" style="max-width:100%;width: auto;height:auto;" alt="Descripción de la imagen"> 
          </div> 
      </div> 
+     <!-- Área de Preguntas y Respuestas -->
+     <div id="area_preguntas" class="p-5 mt-5 text-left rounded-lg" style="background-color: white;">
+         <h3>Preguntas sobre Leyes y Política</h3>
+         <input type="text" id="pregunta_input" placeholder="Haz tu pregunta...">
+         <button onclick="hacerPregunta()">Enviar</button>
+         <div id="respuesta_politico_intelectual"></div>
+     </div>
 </div>
+
+<script>
+    function hacerPregunta() {
+        var pregunta = document.getElementById("pregunta_input").value;
+        // Aquí puedes utilizar código JavaScript para enviar la pregunta a un servidor o procesarla de alguna manera.
+        // Luego, obtén la respuesta del "Político Intelectual" y colócala en el div con id "respuesta_politico_intelectual".
+        var respuesta = obtenerRespuestaDelPoliticoIntelectual(pregunta); // Reemplaza esta línea con tu propia lógica.
+        document.getElementById("respuesta_politico_intelectual").innerHTML = respuesta;
+    }
+
+    function obtenerRespuestaDelPoliticoIntelectual(pregunta) {
+        // Aquí puedes implementar la lógica para obtener la respuesta del "Político Intelectual".
+        // Por ejemplo, podrías enviar la pregunta a un servidor que procese la consulta y devuelva una respuesta.
+        // Luego, retorna esa respuesta aquí.
+        return "Respuesta del Político Intelectual a la pregunta: " + pregunta;
+    }
+</script>
 
 <!-- Noticiero -->
 <div id="noticiero" class=" pt-5 pl-5 pr-5" style="background: linear-gradient(to bottom,  #153e57, white )">
