@@ -174,9 +174,12 @@ btnDonar.addEventListener("click", function() {
         <p class="text-white" style="text-align: justify; color: #153e57">Plática conmigo y pregúntame sobre leyes, política o noticias... 🔍<br></p>  
         <div style="position:relative;"> 
             <textarea class="form-control" id="pregunta_input" style="color:#153e57; height: 150px;" placeholder="Dime qué necesitas..." ></textarea>
-            <button onclick="hacerPregunta()" style="position: relative; margin-top: 10px; padding: 10px;" class="btn btn-info">
-                <img src="ruta_del_icono_de_busqueda.png" alt="Buscar">
+            <button onclick="hacerPregunta()" style="position: absolute; right: 0; top: 0; padding: 10px;" class="btn btn-info">
+                <i class="fas fa-search"></i>
             </button> 
+            <div style="position: absolute; bottom: 10px; right: 10px;">
+                <i class="fas fa-robot"></i>
+            </div>
         </div> 
         <div id="area_preguntas" class="p-2 text-left rounded-lg" style="background-color: white; display: none;"> 
             <div id="respuesta_politico_intelectual" style="color: black; font-family: monospace;"></div> 
