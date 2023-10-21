@@ -20,18 +20,26 @@ integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxU
 <link rel="stylesheet" href="assets/css/styles.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,400;0,800;1,700&family=Jost:ital@1&family=Roboto:wght@100&family=Teko:wght@300&display=swap" rel="stylesheet">
 
-</head>
 <!-- CSS -->
 <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
+
+
+h1, h2, h3, h4, h5, h6, p,
+  #Navbar, .navbar, .card, .nav-link, .nav-user, .nav-building,
+  .nav-link1, .nav-link2, .nav-link4, .nav-link5, .nav-link6, .nav-link7 {
+	font-family: 'Montserrat', sans-serif;
+ }
 	.custom-navbar {
 	  position: fixed;
 	  top: 0;
 	  right: 0;
 	  width: 10%;
 	  height: 100vh;
-	  background: linear-gradient(to bottom, #1d5e85, whitesmoke);
+	  background: linear-gradient(to bottom, #1d5e85, rgb(3, 0, 0));
 	  display: flex;
 	  flex-direction: column;
 	  align-items: center;
@@ -169,11 +177,11 @@ btnDonar.addEventListener("click", function() {
 	</div>
 	
 
-<div id="nuevo_div" class="text-center pl-3 pt-3 pr-3" style="background: linear-gradient(to bottom,  #153e57, white )">  
-    <div class="text-white pl-3 pr-3 pt-3 pb-3 rounded-lg" style="background: linear-gradient(to bottom,  #1d5e85 ,  #153e57 )">  
+<div id="nuevo_div" class="text-center pl-3 pt-5 pr-3" style="background: linear-gradient(to bottom,  #183C5D, white )">  
+    <div class="text-white pl-3 pr-3 pt-3 pb-3" style="background: linear-gradient(to bottom,  #183C5D ,  #000000 ); border-radius: 30px;">  
         <p class="text-white" style="text-align: justify; color: #153e57">Plática conmigo y pregúntame sobre leyes, política o noticias... 🔍<br></p>  
         <div style="position:relative;"> 
-            <textarea class="form-control" id="pregunta_input" style="color:#153e57; height: 150px;" placeholder="Dime qué necesitas..." ></textarea>
+            <textarea class="form-control" id="pregunta_input" style="color:#153e57; height: 150px; border-radius: 30px;" placeholder="Dime qué necesitas..." ></textarea>
             <button onclick="hacerPregunta()" style="position: absolute; bottom: 10px; right: 10px;" class="btn btn-info">
                 <i class="fas fa-robot"></i>
             </button> 
@@ -205,13 +213,13 @@ btnDonar.addEventListener("click", function() {
 
 <!-- Noticiero -->
 <div id="noticiero" class=" pt-3 pl-3 pr-3" style="background-color:white">
-	<div class="col col-md text-white p-3 rounded-lg" style="background: linear-gradient(to bottom,  #1d5e85 ,  #153e57 )">
+	<div class="col col-md text-white p-3 " style="background: linear-gradient(to bottom,  #183C5D ,  #000000 );border-radius: 30px;">
 		<div class="form-row mt-3">
 			<div class="col-md text-black mb-3 text-center">
 				<h2 class="text-center mb-4">Noticiero Político, 24 de Junio 2023</h2>
 				<img class="rounded-lg" src="GIF\noticia.png" style="background-color: whitesmoke; max-width:100%;" width="160px" alt="">
 				<div id="carouselExampleControls"  class="carousel slide" data-ride="carousel">
-						<div class="text-white mt-3 p-4 rounded-lg" style="background-color: #ffffff54">
+						<div class="text-white mt-3 p-4" style="background-color: #ffffff54; border-radius: 30px;">
 							<div id="video-carousel" class="carousel slide" data-bs-ride="carousel">
 							  <div class="carousel-inner">
 
@@ -250,7 +258,7 @@ btnDonar.addEventListener("click", function() {
 		<div class="row mt-3 row-cols-1 row-cols-md-2">
 			<div class="col mb-4">
 				<div class="card h-100">
-					<div class="card-body rounded-lg" style="background: linear-gradient(to bottom,  #1d5e85 ,  #153e57 )">
+					<div class="card-body" style="background: linear-gradient(to bottom,  #183C5D ,  #000000 ); border-radius: 30px;">
 						<h4 class="card-title" style="color: white">• Prohibición de la discriminación</h4>
 						<p class="card-text" style="text-align: justify; color: white">Busco reduicir la discriminación en todas sus formas, incluyendo la discriminación por edad, género, orientación sexual, raza, religión, discapacidad y origen étnico, estableciendo sanciones para las personas y organizaciones que cometan actos de discriminación, ademas de implementar programas educativos y de concientización para fomentar la inclusión y la igualdad. 
 
@@ -262,7 +270,7 @@ btnDonar.addEventListener("click", function() {
 			</div>
 			<div class="col mb-4">
 				<div class="card h-100">
-					<div class="card-body rounded-lg" style="background-color: whitesmoke">
+					<div class="card-body " style="background-color: whitesmoke; border-radius: 30px;">
 						<h4 class="card-title" style="color: #153e57">• A favor de la inclusión</h4>
 						<p class="card-text"  style="text-align: justify; color:#153e57">Fomentare la inclusión laboral de personas con discapacidad, grupos minoritarios y comunidades marginadas, promoviendo la accesibilidad universal en espacios públicos y privados. A su vez, se implementaran programas de capacitación para fomentar la inclusión social y laboral.</p>
 						<img class="" src="GIF\equipo.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
@@ -271,7 +279,7 @@ btnDonar.addEventListener("click", function() {
 			</div>
 			<div class="col mb-4">
 				<div class="card h-100">
-					<div class="card-body rounded-lg"style="background: linear-gradient(to bottom,  #1d5e85 ,  #153e57 )">
+					<div class="card-body" style="background: linear-gradient(to bottom,  #183C5D ,  #000000 ); border-radius: 30px;">
 						<h4 class="card-title" style="color: white">• Promover la sustentabilidad</h4>
 						<p class="card-text"style="text-align: justify; color: white">Destacare el uso responsable de los recursos naturales y la protección del medio ambiente. Fomentando la utilización de energías renovables y la reducción de emisiones de gases de efecto invernadero, estableciendo sanciones para las empresas y personas que incumplan con las mismas.</p>
 						<img class="" src="GIF\tierra.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
@@ -280,7 +288,7 @@ btnDonar.addEventListener("click", function() {
 			</div>
 			<div class="col mb-4">
 				<div class="card h-100">
-					<div class="card-body rounded-lg" style="background-color: whitesmoke">
+					<div class="card-body" style="background-color: whitesmoke;border-radius: 30px;">
 						<h4 class="card-title" style="color: #153e57">• Innovación tecnológica</h4>
 						<p class="card-text" style="text-align: justify; color:#153e57">Promocionare la investigación y el desarrollo tecnológico. Fomentando la innovación tecnológica en empresas y universidades, con la implementación programas educativos para la formación de profesionales en áreas de innovación tecnológica.</p>
 						<img class="" src="GIF\ia.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
@@ -289,7 +297,7 @@ btnDonar.addEventListener("click", function() {
 			</div>
 			<div class="col mb-4">
 				<div class="card h-100">
-					<div class="card-body rounded-lg" style="background: linear-gradient(to bottom,  #1d5e85 ,  #153e57 )">
+					<div class="card-body" style="background: linear-gradient(to bottom,  #183C5D ,  #000000 ); border-radius: 30px;">
 						<h4 class="card-title" style="color: white">• Atención médica</h4>
 						<p class="card-text" style="text-align: justify; color: white">Garantizare el acceso universal a la atención médica de calidad y asequible para toda la población. Además de fomentar la prevención de enfermedades y la promoción de un estilo de vida saludable. Desarrollando los programas de formación y capacitación para el personal médico y de enfermería.</p>
 						<img class="mt-2" src="GIF\medico.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
@@ -310,12 +318,12 @@ btnDonar.addEventListener("click", function() {
 </div>
 
 <div id="conoceme" class="text-center pl-3 mt-3 pr-3" style="background-color: white;">
-	<div class="p-5 text-white rounded-lg" style="background: linear-gradient(to bottom,  #1d5e85 ,  #153e57 )">
+	<div class="p-5 text-white" style="background: linear-gradient(to bottom,  #183C5D ,  #000000 );border-radius: 30px;">
     <h2 class=" text-center">  ¿Quíen soy?</h2>
     <br>
     <h5 class="text-white" style="text-align: justify;">   Soy un líder que tiene una amplia experiencia en el ámbito político, y posee una formación académica destacada en áreas como la filosofía, la historia, la economía, la sociología o la ciencia política.<br><br> Utilizo mis conocimientos y habilidades intelectuales para la toma de decisiones y la implementación de políticas públicas equilibradas, justas y eficaces. También soy capaz de elaborar soluciones creativas y efectivas para los desafíos sociales y políticos.<br> <br>
     <br> 
- <div class="m-0 rounded-lg text-center" style="background-color: whitesmoke;">
+ <div class="m-0 text-center" style="background-color: whitesmoke; border-radius: 30px;">
 <img class="mb-4" src="GIF\saludo.png" style="max-width:100%;width: auto;height:auto;" alt="Logo">
 </div>
 </div>
@@ -352,3 +360,4 @@ btnDonar.addEventListener("click", function() {
 		integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
 		crossorigin="anonymous"></script>
 </body>
+
