@@ -190,20 +190,17 @@ btnDonar.addEventListener("click", function() {
 	<script>function dulce() {
 		swal({
 		  title: "¡Dulce!",
-		  text: "Aquí está tu dulce.",
-		  imageUrl: "ruta_de_la_imagen.jpg", // Reemplaza con la ruta de tu imagen
-		  buttons: {
-			cancel: "Cancelar",
-			download: {
-			  text: "Descargar",
-			  value: "download",
-			},
+		  text: "Aquí está tu dulce. INE solicitando elementos para completar denuncia contra Lorenzo Cordova",
+		  content: {
+			element: "img",
+			attributes: {
+			  src: "https://i.ibb.co/b1ftjRQ/Captura-de-pantalla-2023-11-02-001215.png",
+			  style: "max-width: 100%; cursor: pointer;",
+			  onclick: "window.open('https://i.ibb.co/b1ftjRQ/Captura-de-pantalla-2023-11-02-001215.png', '_blank');"
+			}
 		  },
-		}).then((value) => {
-		  if (value === "download") {
-			// Código para iniciar la descarga del documento
-			// Por ejemplo:
-			// window.location.href = "ruta_del_documento.pdf";
+		  buttons: {
+			cancel: "Cancelar"
 		  }
 		});
 	  }
@@ -211,20 +208,17 @@ btnDonar.addEventListener("click", function() {
 	  function truco() {
 		swal({
 		  title: "¡Truco!",
-		  text: "Aquí está tu truco.",
-		  imageUrl: "ruta_de_la_imagen.jpg", // Reemplaza con la ruta de tu imagen
-		  buttons: {
-			cancel: "Cancelar",
-			download: {
-			  text: "Descargar",
-			  value: "download",
-			},
+		  text: "Aquí está tu truco. Supuesta Ministra del Consejo de la Judicatura federal responde a queja de lider sindical",
+		  content: {
+			element: "img",
+			attributes: {
+			  src: "https://i.ibb.co/fXhfrp6/Captura-de-pantalla-2023-11-02-002410.png",
+			  style: "max-width: 100%; cursor: pointer;",
+			  onclick: "window.open('https://i.ibb.co/fXhfrp6/Captura-de-pantalla-2023-11-02-002410.png', '_blank');"
+			}
 		  },
-		}).then((value) => {
-		  if (value === "download") {
-			// Código para iniciar la descarga del documento
-			// Por ejemplo:
-			// window.location.href = "ruta_del_documento.pdf";
+		  buttons: {
+			cancel: "Cancelar"
 		  }
 		});
 	  }
