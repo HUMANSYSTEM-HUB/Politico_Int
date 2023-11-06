@@ -38,9 +38,9 @@ h1, h2, h3, h4, h5, h6, p,
 	  position: fixed;
 	  top: 0;
 	  right: 0;
-	  width: 10%;
+	  width: 20%;
 	  height: 100vh;
-	  background: linear-gradient(to bottom, #1d5e85, rgb(3, 0, 0));
+	  background: linear-gradient(to bottom, #6C2032, rgb(3, 0, 0));
 	  display: flex;
 	  flex-direction: column;
 	  align-items: center;
@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6, p,
 	.custom-navbar img {
 	  max-width: 100%;
 	  width: auto;
-	  height: 60px;
+	  height: 90px;
 	  margin-bottom: 20px;
 	}
   
@@ -68,13 +68,13 @@ h1, h2, h3, h4, h5, h6, p,
 	}
   
 	.custom-navbar a {
-	  color: #153e57;
+	  color: white;
 	  text-decoration: none;
 	  font-size: 18px;
 	}
   
 	.main-content {
-	  margin-right: 10%;
+	  margin-right: 20%;
 	  padding: 0px;
 	  transition: margin-left 0.3s ease;
 	}
@@ -87,8 +87,8 @@ h1, h2, h3, h4, h5, h6, p,
 	   
 	.custom-navbar img {
 	  max-width: 100%;
-	  width: 20px;
-	  height: 40px;
+	  width: 40px;
+	  height: 60px;
 	  margin-bottom: 20px;
 	  display: none;
 	}
@@ -107,9 +107,9 @@ h1, h2, h3, h4, h5, h6, p,
   
   <!-- HTML -->
   <nav class="custom-navbar">
-	<img class="mr-3 row-cols-1" src="GIF\Logo.png" alt="Logo">
+	<img class="mr-3 row-cols-1" style="background-color: whitesmoke; border-radius: 50px;" src="GIF\Logo.png" alt="Logo">
 	<ul>
-		<li><button id="btnAceptar" type="button" class="btn btn-outline-info mr-3"><i class="mr-2 fas fa-dollar-sign"></i>Donar</button></li>
+		<li><button id="btnAceptar" type="button" class="btn btn-outline-danger mr-3"><i class="mr-2 fas fa-dollar-sign"></i>Donar</button></li>
 	  <li><a href="#noticiero"><i class="far fa-newspaper mr-2"></i>Noticiero Político</a></li>
 	  <li><a href="#metas"><i class="fas fa-bullseye mr-2"></i>Metas</a></li>
 	  <li><a href="#conoceme"><i class="far fa-user mr-2"></i>Conoceme</a></li>
@@ -179,14 +179,43 @@ btnDonar.addEventListener("click", function() {
 
 
 
-<div id="nuevo_div" class="text-center pl-3 pt-5 pr-3" style="background: linear-gradient(to bottom,  #183C5D, white )">  
-	
-    <div class="text-white pl-3 pr-3 pt-3 pb-3" style="background: linear-gradient(to bottom,  #183C5D ,  #000000 ); border-radius: 30px;">  
-        <p class="text-white" style="text-align: justify; color: #153e57">Plática conmigo y pregúntame sobre leyes, política o noticias... 🔍<br></p>  
+<div id="nuevo_div" class="text-center pl-3 pt-5 pr-3" style="background: linear-gradient(to bottom,  #6C2032, white )">  
+   
+
+
+	<div class="text-white pl-3 pr-3 pb-3 pt-3" style="background: linear-gradient(to bottom,  #6C2032 ,  #000000 ); border-radius: 30px;">  
+		<img src="GIF\Platica.png" class="mb-2 rounded-lg" style="max-width:100%; background-color: whitesmoke ; max-width:100%;"  width="160px" >
+		<h1 class="text-white">Plática conmigo ...   </h1>
+
+
+	<script>
+	  
+	  function truco() {
+		swal({
+		  title: "¡Respuesta!",
+		  text: "Aquí está tu truco. Supuesta Ministra del Consejo de la Judicatura federal responde a queja de lider sindical",
+		  content: {
+			element: "img",
+			attributes: {
+			  src: "https://i.ibb.co/fXhfrp6/Captura-de-pantalla-2023-11-02-002410.png",
+			  style: "max-width: 100%; cursor: pointer;",
+			  onclick: "window.open('https://i.ibb.co/fXhfrp6/Captura-de-pantalla-2023-11-02-002410.png', '_blank');"
+			}
+		  },
+		  buttons: {
+			cancel: "Cancelar"
+		  }
+		});
+	  }
+	  </script>
+
+		<p class="text-white" style="text-align: justify; color: #6C2032">Plática conmigo y pregúntame sobre leyes, política o noticias... ⚖️🔍<br></p>  
         <div style="position:relative;"> 
-            <textarea class="form-control" id="pregunta_input" style="color:#153e57; height: 150px; border-radius: 30px;" placeholder="Dime qué necesitas..." ></textarea>
-            <button onclick="hacerPregunta()" style="position: absolute; bottom: 10px; right: 10px;" class="btn btn-info">
-                <i class="fas fa-robot"></i>
+            <textarea class="form-control" id="pregunta_input" style="color:#6C2032; height: 150px; border-radius: 30px;" placeholder="Dime qué necesitas..." ></textarea>
+            <button onclick="truco()" style="position: absolute; bottom: 10px; right: 10px;  border-radius: 30px;" class="btn btn-danger">
+				100   <i class="fas fa-user-circle"></i>
+            </button>  <button onclick="truco()" style="position: absolute; bottom: 10px; right: 90px;  border-radius: 30px;" class="btn btn-outline-danger">
+                <i class="fas fa-file-upload"></i>
             </button> 
         </div> 
         <div id="area_preguntas" class="p-2 mt-1 text-left rounded-lg" style="background-color: white; display: none;"> 
@@ -212,11 +241,21 @@ btnDonar.addEventListener("click", function() {
     } 
 </script>
 
+<div class="p-5 ml-3 mr-3 mt-3 text-white" style="background: linear-gradient(to bottom,  #6C2032 ,  #000000 );border-radius: 30px;">
+	<h2 class=" text-center">  ¿Quíen soy?</h2>
+	<br>
+	<h5 class="text-white" style="text-align: justify;">   Soy Sergio Medina, candidato a diputado federal, y cuento con una sólida formación en economía, turismo y desarrollo sostenible. A lo largo de mi trayectoria, he trabajado en el diseño e implementación de políticas públicas orientadas a promover un crecimiento económico equitativo y sostenible. Mi experiencia en sistemas electrónicos empresariales y bases de datos me brinda una perspectiva única para abordar los desafíos del mundo moderno. <br> <br> Como líder comprometido, estoy enfocado en construir una sociedad sostenible, donde se promueva el bienestar de todos los ciudadanos. Estoy listo para trabajar incansablemente en beneficio de nuestra comunidad leonense y contribuir al progreso del estado de Guanajuato.
+		<br> 
+	<br> 
+ <div class="mt-4 text-center" style="background-color: whitesmoke; border-radius: 30px;">
+<img class="mb-4" src="GIF\33.png" style="max-width:60%;width: auto;height:auto;" alt="Logo">
+</div>
+</div>
 
 
-<!-- Noticiero -->
+<!-- Noticiero 
 <div id="noticiero" class=" pt-3 pl-3 pr-3" style="background-color:white">
-	<div class="col col-md text-white p-3 " style="background: linear-gradient(to bottom,  #183C5D ,  #000000 );border-radius: 30px;">
+	<div class="col col-md text-white p-3 " style="background: linear-gradient(to bottom,  #6C2032 ,  #000000 );border-radius: 30px;">
 		<div class="form-row mt-3">
 			<div class="col-md text-black mb-3 text-center">
 				<h2 class="text-center mb-4">Noticiero Político, 24 de Junio 2023</h2>
@@ -248,92 +287,118 @@ btnDonar.addEventListener("click", function() {
 </div>
 </div>
 
-<!-- Bodier -->
-
+ Bodier -->
 
 
 
 <div id="metas" class="mt-5">
-	<div class="container text-center">
-		<img class="p-2 rounded-lg" src="GIF\seguro.png" style="max-width:100%; background-color: whitesmoke ; max-width:100%;" width="160px" alt="">
-		<h2 class="mb-4 mt-4 text-center" style="color:#153e57;"> Metas Legislativas</h2>
+    <div class="container text-center">
+        <img class="p-2 rounded-lg" src="GIF\44.png" style="max-width:100%; background-color: whitesmoke ; max-width:100%;" width="160px" alt="">
+        <h2 class="mb-4 mt-4 text-center" style="color:#6C2032"> Metas Legislativas</h2>
 
-		<div class="row mt-3 row-cols-1 row-cols-md-2">
-			<div class="col mb-4">
-				<div class="card h-100">
-					<div class="card-body" style="background: linear-gradient(to bottom,  #183C5D ,  #000000 ); border-radius: 30px;">
-						<h4 class="card-title" style="color: white">• Prohibición de la discriminación</h4>
-						<p class="card-text" style="text-align: justify; color: white">Busco reduicir la discriminación en todas sus formas, incluyendo la discriminación por edad, género, orientación sexual, raza, religión, discapacidad y origen étnico, estableciendo sanciones para las personas y organizaciones que cometan actos de discriminación, ademas de implementar programas educativos y de concientización para fomentar la inclusión y la igualdad. 
+        <div class="row mt-3 row-cols-1 row-cols-md-2">
+            <div class="col mb-4">
+                <div class="h-100" style="background: linear-gradient(to bottom, #6C2032 ,  #000000 ); border-radius: 30px;">
+                    <div class="p-4">
+                        <h4 style="color: white">• Prohibición de la discriminación</h4>
+                        <p style="text-align: justify; color: white">Busco reducir la discriminación en todas sus formas, incluyendo la discriminación por edad, género, orientación sexual, raza, religión, discapacidad y origen étnico, estableciendo sanciones para las personas y organizaciones que cometan actos de discriminación, además de implementar programas educativos y de concientización para fomentar la inclusión y la igualdad.</p>
+                        <img class="" src="GIF\perjudicar.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="h-100" style="background-color: whitesmoke; border-radius: 30px;">
+                    <div class="p-4">
+                        <h4 style="color: #6C2032">• A favor de la inclusión</h4>
+                        <p style="text-align: justify; color:#6C2032">Fomentaré la inclusión laboral de personas con discapacidad, grupos minoritarios y comunidades marginadas, promoviendo la accesibilidad universal en espacios públicos y privados. A su vez, se implementarán programas de capacitación para fomentar la inclusión social y laboral.</p>
+                        <img class="" src="GIF\equipo.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="h-100" style="background: linear-gradient(to bottom,  #6C2032 ,  #000000 ); border-radius: 30px;">
+                    <div class="p-4">
+                        <h4 style="color: white">• Promover la sustentabilidad</h4>
+                        <p style="text-align: justify; color: white">Destacaré el uso responsable de los recursos naturales y la protección del medio ambiente. Fomentando la utilización de energías renovables y la reducción de emisiones de gases de efecto invernadero, estableciendo sanciones para las empresas y personas que incumplan con las mismas.</p>
+                        <img class="" src="GIF\tierra.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="h-100" style="background-color: whitesmoke;border-radius: 30px;">
+                    <div class="p-4">
+                        <h4 style="color: #6C2032">• Innovación tecnológica</h4>
+                        <p style="text-align: justify; color:#6C2032">Promocionaré la investigación y el desarrollo tecnológico. Fomentando la innovación tecnológica en empresas y universidades, con la implementación de programas educativos para la formación de profesionales en áreas de innovación tecnológica.</p>
+                        <img class="" src="GIF\ia.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="h-100" style="background: linear-gradient(to bottom,  #6C2032 ,  #000000 ); border-radius: 30px;">
+                    <div class="p-4">
+                        <h4 style="color: white">• Atención médica</h4>
+                        <p style="text-align: justify; color: white">Garantizaré el acceso universal a la atención médica de calidad y asequible para toda la población. Además de fomentar la prevención de enfermedades y la promoción de un estilo de vida saludable. Desarrollando los programas de formación y capacitación para el personal médico y de enfermería.</p>
+                        <img class="mt-2" src="GIF\medico.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="h-100" style="background-color: whitesmoke; border-radius: 30px;">
+                    <div class="p-4">
+                        <h4 style="color: #6C2032">• Educación pública</h4>
+                        <p style="text-align: justify; color:#6C2032">Busco garantizar el acceso a la educación gratuita y de calidad para toda la población, desarrollando políticas públicas que promuevan la igualdad de oportunidades educativas para todos los estudiantes, independientemente de su origen socioeconómico o cultural. Estableceré programas de formación y capacitación para los docentes con el objetivo de mejorar la calidad de la educación.</p>
+                        <img class="" src="GIF\educacion.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-                           </p>
-						   <img class="" src="GIF\perjudicar.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
-					
-						</div>
-				</div>
-			</div>
-			<div class="col mb-4">
-				<div class="card h-100">
-					<div class="card-body " style="background-color: whitesmoke; border-radius: 30px;">
-						<h4 class="card-title" style="color: #153e57">• A favor de la inclusión</h4>
-						<p class="card-text"  style="text-align: justify; color:#153e57">Fomentare la inclusión laboral de personas con discapacidad, grupos minoritarios y comunidades marginadas, promoviendo la accesibilidad universal en espacios públicos y privados. A su vez, se implementaran programas de capacitación para fomentar la inclusión social y laboral.</p>
-						<img class="" src="GIF\equipo.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
-					</div>
-				</div>
-			</div>
-			<div class="col mb-4">
-				<div class="card h-100">
-					<div class="card-body" style="background: linear-gradient(to bottom,  #183C5D ,  #000000 ); border-radius: 30px;">
-						<h4 class="card-title" style="color: white">• Promover la sustentabilidad</h4>
-						<p class="card-text"style="text-align: justify; color: white">Destacare el uso responsable de los recursos naturales y la protección del medio ambiente. Fomentando la utilización de energías renovables y la reducción de emisiones de gases de efecto invernadero, estableciendo sanciones para las empresas y personas que incumplan con las mismas.</p>
-						<img class="" src="GIF\tierra.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
-					</div>
-				</div>
-			</div>
-			<div class="col mb-4">
-				<div class="card h-100">
-					<div class="card-body" style="background-color: whitesmoke;border-radius: 30px;">
-						<h4 class="card-title" style="color: #153e57">• Innovación tecnológica</h4>
-						<p class="card-text" style="text-align: justify; color:#153e57">Promocionare la investigación y el desarrollo tecnológico. Fomentando la innovación tecnológica en empresas y universidades, con la implementación programas educativos para la formación de profesionales en áreas de innovación tecnológica.</p>
-						<img class="" src="GIF\ia.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
-					</div>
-				</div>
-			</div>
-			<div class="col mb-4">
-				<div class="card h-100">
-					<div class="card-body" style="background: linear-gradient(to bottom,  #183C5D ,  #000000 ); border-radius: 30px;">
-						<h4 class="card-title" style="color: white">• Atención médica</h4>
-						<p class="card-text" style="text-align: justify; color: white">Garantizare el acceso universal a la atención médica de calidad y asequible para toda la población. Además de fomentar la prevención de enfermedades y la promoción de un estilo de vida saludable. Desarrollando los programas de formación y capacitación para el personal médico y de enfermería.</p>
-						<img class="mt-2" src="GIF\medico.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
-					</div>
-				</div>
-			</div>
-			<div class="col mb-4">
-				<div class="card h-100">
-					<div class="card-body rounded-lg" style="background-color: whitesmoke">
-						<h4 class="card-title" style="color: #153e57">• Educación pública</h4>
-						<p class="card-text" style="text-align: justify; color:#153e57">Busco garantizar el acceso a la educación gratuita y de calidad para toda la población, desarrollando políticas públicas que promuevan la igualdad de oportunidades educativas para todos los estudiantes, independientemente de su origen socioeconómico o cultural. Estableceré programas de formación y capacitación para los docentes con el objetivo de mejorar la calidad de la educación.</p>
-						<img class="" src="GIF\educacion.png" style="max-width:15%;width: auto;height:auto;" alt="Logo">
-						</div>
-			</div>
+
+
+<div class="pl-5 pr-5 pb-5 pt-5 ml-3 mr-3 mt-3 text-white" style="background: linear-gradient(to bottom,  #6C2032 ,  #000000 );border-radius: 30px;">
+    
+	
+<div class="mb-4 text-center " style="background-color: whitesmoke; border-radius: 30px;">
+		<img class="mb-4" src="GIF\22.png" style="max-width:60%;width: auto;height:auto;" alt="Logo">
 		</div>
-	</div>
-	</div>
-</div>
+	<h2 class="text-center">Contáctame</h2>
+    <form>
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" class="form-control rounded" id="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Correo electrónico:</label>
+            <input type="email" class="form-control rounded" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea class="form-control rounded" id="mensaje" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" class="form-control rounded" id="telefono" required>
+        </div>
+        <div class="form-group">
+            <label for="colonia">Colonia:</label>
+            <select class="form-control rounded" id="colonia" required>
+                <option value="" disabled selected>Selecciona una colonia</option>
+                <!-- Aquí puedes agregar las colonias de León, GTO -->
+                <option value="colonia1">Colonia 1</option>
+                <option value="colonia2">Colonia 2</option>
+                <!-- Añade más opciones según sea necesario -->
+            </select>
+        </div>
+        <button type="submit" class="btn btn-danger"> <i class="mr-2 fas fa-paper-plane"></i>Enviar</button>
+    </form>
+    <!-- Agrega aquí la parte para la imagen -->
 
-<div id="conoceme" class="text-center pl-3 mt-3 pr-3" style="background-color: white;">
-	<div class="p-5 text-white" style="background: linear-gradient(to bottom,  #183C5D ,  #000000 );border-radius: 30px;">
-    <h2 class=" text-center">  ¿Quíen soy?</h2>
-    <br>
-    <h5 class="text-white" style="text-align: justify;">   Soy un líder que tiene una amplia experiencia en el ámbito político, y posee una formación académica destacada en áreas como la filosofía, la historia, la economía, la sociología o la ciencia política.<br><br> Utilizo mis conocimientos y habilidades intelectuales para la toma de decisiones y la implementación de políticas públicas equilibradas, justas y eficaces. También soy capaz de elaborar soluciones creativas y efectivas para los desafíos sociales y políticos.<br> <br>
-    <br> 
- <div class="m-0 text-center" style="background-color: whitesmoke; border-radius: 30px;">
-<img class="mb-4" src="GIF\saludo.png" style="max-width:100%;width: auto;height:auto;" alt="Logo">
-</div>
-</div>
 </div>
 
   <!-- Footer -->
-<div class="text-center" id="gif" style="background: linear-gradient(to bottom,  white ,  #153e57 )">
+<div class="text-center" id="gif" style="background: linear-gradient(to bottom,  white ,  #6C2032)">
     <div class="container mt-3">
         <div class="row">
             <div class="col">
